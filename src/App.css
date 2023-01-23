@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol, ul, li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+
+.home-button{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #FF6500;
+  padding: .3rem;
+  border-radius: .3rem;
+}
+
+
+.nav-route-link{
+  display: block;
+  width: max-content;
+  border: 2px solid #FF6500;
+  border-radius: .3rem;
+  padding: 1rem;
+  margin: .3rem;
+}
+
+.square{
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  height: var(--height);
+  width: var(--height);
+  background-color: var(--bg-color);
+}
+
+.circle{
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  height: var(--radius);
+  width: var(--radius);
+  border-radius: 50%;
+  background-color: var(--bg-color);
+}
