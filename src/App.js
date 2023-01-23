@@ -14,6 +14,7 @@ function App() {
         <Route path="/navbar-one" exact render={(props)=>{return <NavBarOne {...props}/>}}/>
 
         <Route path="/" exact render={(props)=>{return <Home {...props}/>}}/>
+        <Route path="/nav-bars" exact render={(props)=>{return <Home {...props}/>}}/>
         <Route component={NotFound} />
       </Switch>
       <Footer/>

@@ -1,6 +1,6 @@
 {
-  "homepage": "http://rkant225.github.io/animations",
-  "name": "animations_abc",
+  "homepage": "http://rkant225.github.io/nav-bars",
+  "name": "nav-bars",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
