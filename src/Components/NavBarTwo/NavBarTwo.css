@@ -1,0 +1,273 @@
+:root{
+  --n2-body-color: #e4e9f7;
+  --n2-sidebar-color: #ffffff;
+  --n2-primary-color: #695cfe;
+  --n2-primary-color-light: #f6f5ff;
+  --n2-toggle-color: #dddddd;
+  --n2-text-color: #707070;
+}
+.n2-page.dark {
+  --n2-body-color: #18191a;
+  --n2-sidebar-color: #242526;
+  --n2-primary-color: #3a3b3c;
+  --n2-primary-color-light: #3a3b3c;
+  --n2-toggle-color: #ffffff;
+  --n2-text-color: #cccccc;
+}
+
+.n2-page {
+  height: 100vh;
+  width: 100vw;
+  color: var(--n2-text-color);
+}
+
+/* Containers */
+.n2-nav-and-content-container {
+  height: 100%;
+  display: flex;
+}
+
+.n2-side-nav-container {
+  background: var(--n2-sidebar-color);
+  transition: all .4s ease-in-out;
+}
+
+.n2-page-container {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 1rem;
+  background-color: var(--n2-sidebar-color);
+  transition: all .4s ease-in-out;
+}
+
+.n2-page-container::-webkit-scrollbar {
+  width: 10px;
+  background-color: black;
+}
+
+.n2-page-container::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: var(--n2-primary-color);
+  border-radius: 5px;
+}
+
+
+/* Nav Bar */
+.n2-nav-bar{
+  position: relative;
+  width: 250px;
+  padding: .6rem .8rem;
+  color: var(--n2-text-color);
+  height: calc(100%);
+  overflow: auto;
+  white-space: nowrap;
+  transition: all .4s ease-in-out;
+  box-shadow: 2px 2px 10px var(--n2-primary-color);
+}
+.n2-nav-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.n2-nav-bar.close .text{
+  opacity: 0;
+}
+
+.n2-nav-bar.close {
+  width: 70px;
+}
+
+/* Company logo */
+.n2-company-logo-container {
+  display: flex;
+  align-items: center;
+}
+.n2-company-logo {
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.n2-company-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+/* NavBar toggle button */
+.n2-nav-bar-toggle-button {
+  position: fixed;
+  top: 1.2rem;
+  right: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: .3rem;
+  background-color: var(--n2-primary-color);
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.n2-nav-bar-toggle-button i {
+  color: white; 
+}
+
+/* Icons */
+.icon{
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Search box */
+.n2-search-container{
+  display: flex;
+  gap: 1rem;
+  margin-top: .5rem;
+  background-color: var(--n2-primary-color-light);
+  border-radius: .3rem;
+  cursor: pointer;
+}
+.n2-nav-bar.close .n2-search-container{
+  background-color: transparent;
+}
+.n2-search-text-box{
+  border: none;
+  outline: none;
+  border-radius: .3rem;
+  background-color: var(--n2-primary-color-light);
+  color: var(--n2-text-color);
+}
+
+.n2-menu-list-and-logout-container{
+  height: calc(100% - 6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Menu Items */
+.n2-menu-list{
+
+}
+.n2-menu-item{
+  /* This flex is very impostant to stop the movement of inner items on reducing the width of nav-bar */
+  display: flex; 
+  margin: .4rem 0rem;
+}
+
+.n2-menu-link{
+  color: var(--n2-text-color);
+  border-radius: .3rem;
+  display: flex;  
+  align-items: center;
+  transition: all .2s ease-in-out;
+  flex-grow: 1;
+}
+
+.n2-menu-link:hover{
+  color: var(--n2-toggle-color);
+  background-color: var(--n2-primary-color); 
+}
+.n2-menu-text{
+  margin-left: 1rem;
+}
+
+
+
+/* Login-Logout */
+.n2-login-container{
+  margin-bottom: .5rem;
+  display: flex;
+}
+.n2-menu-link{}
+.n2-menu-text{}
+
+
+
+/* Dark mode switch */
+.n2-mode-container{
+  position: relative;
+  background-color: var(--n2-primary-color-light);
+  border-radius: .5rem;
+  height: 3.5rem;
+}
+.n2-nav-bar.close .n2-mode-container{
+  background-color: transparent;
+}
+.n2-mode-container i{
+  position: absolute;
+  top: .5rem;
+  left: 0;
+  transition: all .1s ease-in-out;
+}
+
+.n2-mode-container .fa-sun{
+  opacity: 1;
+}
+
+.n2-page.dark .n2-mode-container .fa-sun{
+  opacity: 0;
+}
+
+.n2-mode-container .fa-moon{
+  opacity: 0;
+}
+
+.n2-page.dark .n2-mode-container .fa-moon{
+  opacity: 1;
+}
+
+.n2-nav-bar.close .n2-mode-container i{
+  display: none;
+}
+
+.n2-mode-text-button-container{
+  margin-left: 2.4rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.n2-mode-text{
+
+}
+.n2-mode-switch{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background-color: var(--n2-toggle-color);
+  height: 20px;
+  width: 40px;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+.n2-nav-bar.close .n2-mode-switch{
+  right: 2px;
+}
+
+.n2-mode-switch::before{
+  content: '';
+  position: absolute;
+  top: .15rem;
+  left: .2rem;
+  background-color: var(--n2-sidebar-color);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.n2-page.dark .n2-mode-switch::before{
+  left: 1.37rem;
+}
+.n2-page.dark .n2-mode-switch{
+  background-color: var(--n2-toggle-color);
+}

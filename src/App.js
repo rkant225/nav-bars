@@ -5,6 +5,7 @@ import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import NavBarOne from "./Components/NavBarOne/NavBarOne";
 import NotFound from "./Components/NotFound/NotFound";
+import NavBarTwo from "./Components/NavBarTwo/NavBarTwo";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Link to={'/'} className="home-button">Home</Link>
       <Switch>
         <Route path="/navbar-one" exact render={(props)=>{return <NavBarOne {...props}/>}}/>
+        <Route path="/navbar-two" exact render={(props)=>{return <NavBarTwo {...props}/>}}/>
 
         <Route path="/" exact render={(props)=>{return <Home {...props}/>}}/>
         <Route path="/nav-bars" exact render={(props)=>{return <Home {...props}/>}}/>
