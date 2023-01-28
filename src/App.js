@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import NavBarOne from "./Components/NavBarOne/NavBarOne";
 import NotFound from "./Components/NotFound/NotFound";
 import NavBarTwo from "./Components/NavBarTwo/NavBarTwo";
+import NavBarThree from "./Components/NavBarThree/NavBarThree";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route path="/navbar-one" exact render={(props)=>{return <NavBarOne {...props}/>}}/>
         <Route path="/navbar-two" exact render={(props)=>{return <NavBarTwo {...props}/>}}/>
+        <Route path="/navbar-three" exact render={(props)=>{return <NavBarThree {...props}/>}}/>
 
         <Route path="/" exact render={(props)=>{return <Home {...props}/>}}/>
         <Route path="/nav-bars" exact render={(props)=>{return <Home {...props}/>}}/>

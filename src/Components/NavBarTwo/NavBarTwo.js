@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavBarTwo.css";
 import { Link } from "react-router-dom";
 import companyLogo from "../../assets/companyLogo.png";
@@ -45,14 +45,27 @@ const NAV_MENU_DATA = [
 const NavBarTwo = () => {
   const INITIAL_CLASSNAME = "n2";
 
+  const [mode, setMode] = useState('Light Mode');
+
   const handleModeButtonClick = ()=>{
     const page = document.querySelector(`.${INITIAL_CLASSNAME}-page`);
     page.classList.toggle('dark');
+
+    if(page.classList.contains('dark')){
+      setMode('Dark Mode');
+    } else {
+      setMode('Light Mode');
+    }
   }
 
   const handleNavarToggleButtonClick = ()=>{
     const navBar = document.querySelector(`.${INITIAL_CLASSNAME}-nav-bar`);
     navBar.classList.toggle('close');
+  }
+
+  const handleSearchIconClick = ()=>{
+    const navBar = document.querySelector(`.${INITIAL_CLASSNAME}-nav-bar`);
+    navBar.classList.remove('close');
   }
 
   // <div className={`${INITIAL_CLASSNAME}`}></div>
@@ -84,14 +97,14 @@ const NavBarTwo = () => {
             {/* Search Box */}
             {/* This style={{display: 'flex'}} is very impostant to stop the movement of inner items on reducing the width of nav-bar */}
             <div style={{display: 'flex'}}> 
-            <div className={`${INITIAL_CLASSNAME}-search-container`}>
-              <i className="fa fa-search icon"></i>
-              <input
-                className={`${INITIAL_CLASSNAME}-search-text-box text`}
-                type="text"
-                placeholder="Search..."
-              />
-            </div>
+              <div className={`${INITIAL_CLASSNAME}-search-container`} onClick={handleSearchIconClick}>
+                <i className="fa fa-search icon"></i>
+                <input
+                  className={`${INITIAL_CLASSNAME}-search-text-box text`}
+                  type="text"
+                  placeholder="Search..."
+                />
+              </div>
             </div>
             
             <div
@@ -165,7 +178,7 @@ const NavBarTwo = () => {
                   <i className="fa fa-moon icon"></i>
                   <i className="fa fa-sun icon"></i>
                   <div className={`${INITIAL_CLASSNAME}-mode-text-button-container`}>
-                    <span className={`${INITIAL_CLASSNAME}-mode-text text`}>Dark Mode</span>
+                    <span className={`${INITIAL_CLASSNAME}-mode-text text`}>{mode}</span>
                     <span className={`${INITIAL_CLASSNAME}-mode-switch`} onClick={handleModeButtonClick}></span>
                   </div>
                 </div>
