@@ -79,9 +79,9 @@ a{
 
 /* Mode Switch */
 .n3-mode-switch{
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  position: fixed;
+  bottom: 4rem;
+  right: 1.3rem;
   height: 20px;
   width: 40px;
   border-radius: 10px;

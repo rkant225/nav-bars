@@ -11,7 +11,7 @@ import NavBarThree from "./Components/NavBarThree/NavBarThree";
 function App() {
   return (
     <>
-      <Link to={'/'} className="home-button">Home</Link>
+      <Link to={'/nav-bars'} className="home-button">Home</Link>
       <Switch>
         <Route path="/navbar-one" exact render={(props)=>{return <NavBarOne {...props}/>}}/>
         <Route path="/navbar-two" exact render={(props)=>{return <NavBarTwo {...props}/>}}/>
