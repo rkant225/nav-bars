@@ -271,3 +271,13 @@
 .n2-page.dark .n2-mode-switch{
   background-color: var(--n2-toggle-color);
 }
+
+.n2-text-content{
+  padding: 1rem 4rem;
+}
+
+@media (max-width : 850px){
+  .n2-text-content{
+    padding: 1rem .5rem;
+  }
+}

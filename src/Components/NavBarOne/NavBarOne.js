@@ -34,7 +34,7 @@ const NAV_MENU_DATA = [
         subMenu: [
           {
             label: "Kathmandu",
-            icon: <i class="fa fa-poo"></i>,
+            icon: <i class="fa fa-cloud"></i>,
             link: "#",
             subMenu: [],
           },
