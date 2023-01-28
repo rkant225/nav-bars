@@ -160,6 +160,14 @@ const NavBarTwo = () => {
                     </span>
                   </Link>
                 </li>
+                <li className={`${INITIAL_CLASSNAME}-menu-item`}>
+                  <Link href="https://www.youtube.com/watch?v=bFvfqUMjvsA" target={'_blank'} rel="noreferrer" className={`${INITIAL_CLASSNAME}-menu-link`}>
+                    <i className="fa fa-heart icon"></i>
+                    <span className={`${INITIAL_CLASSNAME}-menu-text text`}>
+                      Credits @CodingLab
+                    </span>
+                  </Link>
+                </li>
               </ul>
 
               <div className={`${INITIAL_CLASSNAME}-logout-and-mode-container`}>
